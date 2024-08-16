@@ -36,9 +36,27 @@ boxes.forEach((box) => {
 });
 
 const checkWinner = () =>{
-    for (pattern of winPatterns){
-        console.log(pattern[0],pattern[1],pattern[2]);
-        console.log(boxes[pattern[0]],boxes[pattern[1]],boxes[pattern[2]]);
-        
+    for ( let pattern of winPatterns){
+        let pos1Val = boxes[pattern[0]].innerHTML;
+        let pos2Val = boxes[pattern[1]].innerHTML;
+        let pos3Val = boxes[pattern[2]].innerHTML;
+
+        if(pos1Val != "" && pos2Val != "" && pos3Val != ""){
+            if(pos1Val===pos2Val && pos2Val === pos3Val){
+                console.log("winner");
+                alert("Winner");
+                 // Trigger confetti
+                 confetti({
+                    particleCount: 200,
+                    spread: 100,
+                    origin: { y: 0.6 },
+                    colors: ['#bb0000', '#ffffff'],  // Red and white colors
+                    shapes: ['circle', 'square','Triangle'],    // Different shapes of confetti
+                    gravity: 1                    // Slow down the confetti fall
+                });
+                
+            }
+        }
+
     }
-}
+};
