@@ -19,7 +19,17 @@ boxes.forEach((box) => {
     box.addEventListener("click",() => {
         console.log("box was clicked");
         
+        if(turn0){
+            box.innerText= "0" //player 0
+            turn0=false;
+        }
+        else{
+            box.innerText="X"//playerX
+            turn0=true;
+        }
+        box.disabled=true;
+        
+        
     });
 
-    }
 });
