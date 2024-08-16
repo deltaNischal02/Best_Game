@@ -20,16 +20,25 @@ boxes.forEach((box) => {
         console.log("box was clicked");
         
         if(turn0){
-            box.innerText= "0" //player 0
+            box.innerHTML= '<img src="./images/0.jpg" alt="Player 0" srcset="" width ="100% height="100%"/>'; //player 0
             turn0=false;
         }
         else{
-            box.innerText="X"//playerX
+            box.innerHTML= '<img src="./images/X.png" alt="Player 1" srcset="" width ="100% height="200%"/>'; //player x
             turn0=true;
         }
         box.disabled=true;
+        checkWinner();
         
         
     });
 
 });
+
+const checkWinner = () =>{
+    for (pattern of winPatterns){
+        console.log(pattern[0],pattern[1],pattern[2]);
+        console.log(boxes[pattern[0]],boxes[pattern[1]],boxes[pattern[2]]);
+        
+    }
+}

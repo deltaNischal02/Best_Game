@@ -31,10 +31,12 @@ body{
     cursor: pointer;
     border: none;
     font-size: 8vmin;
+    background-color: antiquewhite;
+    color: black;
 }
 .box :hover{
     border-radius: 5rem;
-    box-shadow: 0 0 1em beige;
+    /* box-shadow: 0 0 1em beige; */
 
 }
 #resetBtn{
