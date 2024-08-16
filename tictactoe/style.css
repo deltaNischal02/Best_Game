@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #2f2f2f;
+    text-align: center;
+}
+.container{
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: #000; */
+    
+}
+.game{
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap:wrap ;
+    justify-content: center;
+    align-items: center;
+    gap: 1vmin;
+}
+.box{
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: none;
+    font-size: 8vmin;
+}
+.box :hover{
+    border-radius: 5rem;
+    box-shadow: 0 0 1em beige;
+
+}
+#resetBtn{
+    padding: 0.7rem;
+    font-size:1rem ;
+    font-stretch: expanded;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    /* background-color: blue; */
+}
